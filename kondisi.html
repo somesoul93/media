@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+  <script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="materi.html";
+      }
+    </script>
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+    <main style="text-align:center; padding-top:56px">
+        <i class= "mdi-action-open-with" style="font-size:10em;"></i><br>
+        <h4>Kondisi</h4>
+        <br>
+        <a class='dropdown-button btn-large waves-effect waves-light light-blue lighten-1' href='#' data-activates='submateri1'>Pilih Sub Materi <i class="mdi-navigation-expand-more"></i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='submateri1' class='dropdown-content'>
+          <li><a href="#pendahuluan" class="collection-item waves-effect">Pendahuluan</a></li>
+          <li><a href="#pif" class="collection-item waves-effect">Pernyataan if</a></li>
+          <li><a href="#pifelse" class="collection-item waves-effect">Pernyataan if-else</a></li>
+          <li><a href="#pifelse2" class="collection-item waves-effect">Pernyataan if-else majemuk</a></li>
+          <li><a href="#scase" class="collection-item waves-effect">Pernyataan Switch Case</a></li>
+        </ul>
+    </main>
+    <main style="padding-bottom:0">
+        <div class="container" style="padding:0">
+
+      <a href="#top" class="atas btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="mdi-navigation-expand-less"></i></a>
+
+
+<h5 id="pendahuluan" class="section scrollspy">Pendahuluan</h5>
+<p class="flow-text">Pernyataan percabangan pada pemrograman digunakan untuk memecahkan persoalan untuk mengambil suatu keputusan diantara sekian pernyataan yang ada,  dimana sebuah instruksi (pernyataan) akan  dilaksanakan jika sebuah kondisi/persyaratan terpenuhi.</p>
+<h5 id="pif" class="section scrollspy">Pernyataan if</h5>
+<p class="flow-text">Pernyataan  if mempunyai pengertian "jika kondisi bernilai benar, maka (pernyataan) perintah akan dikerjakan dan jika tidak memenuhi syarat maka program akan diabaikan".  </p>
+<p class="flow-text">Dari pengertian tersebut diatas maka dapat dilihat diagram alir seperti pada gambar berikut :</p>
+<center><img class="responsive-img" src="images/kondisi2.jpg"></img></center>
+<p class="flow-text">Bentuk umum dari pernyataan if adalah :</p>
+<pre>
+<code class="language-cpp">
+    If(kondisi){
+      Pernyataan;
+    }
+    </code>
+</pre>
+<p class="flow-text">Penerapan if misalnya untuk menentukan seseorang boleh menonton bioskop atau tidak. Kondisi yang digunakan, seseorang boleh menonton bioskop kalau sudah berusia 17 tahun. Penulisan proframnya adalah sebagai berikut :</p>
+<pre>
+<code class="language-cpp">
+    // usia.cpp
+    // program untuk mengambil keputusan
+    // menggunakan pernyataan if
+
+    #include &lt;iostream.h>
+    void main(){
+        int usia;
+        cout << "berapa usia Anda?";
+        cin >> usia;
+        if (usia < 17){
+            cout << "Anda tidak diperkenankan menonton" << endl;
+        }
+    }
+
+    </code>
+</pre>
+<h5 id="pifelse" class="section scrollspy">Pernyataan if-else</h5>
+<p class="flow-text">Pernyataan if-else digunakan jika suatu kondisi tidak terpenuhi dikehendaki untuk melakukan suatu pernyataan. Berikut diagram alir dari if-else :</p>
+<center><img class="responsive-img" src="images/kondisi1.jpg"></img></center>
+
+<p class="flow-text">Bentuk umum dari if-else adalah sebagai berikut :</p>
+<pre>
+<code class="language-cpp">
+    If(kondisi){
+        Pernyataan1;
+    }else{
+        Pernyataan2;
+    }
+    </code>
+</pre>
+<p class="flow-text">Pernyataan 1 akan dieksekusi jika kondisi bernilai benar. Sedangkan pernyataan 2 akan dieksekusi jika kondisi bernilai salah.</p>
+<p class="flow-text">Program berikut merupakan hasil pengembangan dari program sebelumnya. Selain dapat memberikan pesan :</p>
+<pre>
+<code class="language-cpp">
+Anda tidak diperkenankan menonton
+    </code>
+</pre>
+<p class="flow-text">Program juga bisa memberikan pesan :</p>
+<pre>
+<code class="language-cpp">
+Selamat menonton
+    </code>
+</pre>
+<p class="flow-text">Kalau usia bernilai lebih besar atau sama dengan 17.</p>
+<pre>
+<code class="language-cpp">
+    // usia.cpp
+    // program untuk mengambil keputusan
+    // menggunakan pernyataan if-else
+
+    #include &lt;iostream.h>
+    void main(){
+        int usia;
+        cout << "berapa usia Anda?";
+        cin >> usia;
+        if (usia < 17){
+            cout << "Anda tidak diperkenankan menonton" << endl;
+        }else{
+            cout << "Selamat menonton" << endl;
+        }
+    }
+    </code>
+</pre>
+<h5 id="pifelse2" class="section scrollspy">Pernyataan if-else majemuk</h5>
+<p class="flow-text">Pernyataan if-else majemuk bermanfaat untuk menyeleksi sejumlah kemungkinan tindakan. Penyelesaian dilakukan secara bertingkat. Begitu ada kondisi yang bernilai benar, pernyataan yang bersesuaian dengan kondisi tersebut akan dijalankan.
+Berikut bentuk umumnya :</p>
+<pre>
+<code class="language-cpp">
+    If(kondisi1){
+        Pernyataan1;
+    } else if(kondisi 2){
+        Pernyataan2;
+    } else{
+        Pernyataan3;
+    }
+    </code>
+</pre>
+<p class="flow-text">Contoh berikut memperlihatkan penyelesaian sebuah nilai dengan menggunakan if :</p>
+<pre>
+<code class="language-cpp">
+    // kodehari.cpp
+    //contoh pemakaian if
+    //untuk menentukan nama hari
+
+    #include &lt;iostream.h>
+
+    void main(){
+        int kode_hari
+
+        cout << "Menentukan hari" << endl;
+        cout << "1=SENIN 3=RABU 5=JUMAT 7=MINGGU" << endl;
+        cout << "2=SELASA 4=KAMIS 6=SABTU" << endl;
+        cout << "Kode hari (1..7): ";
+        cin >> kode_hari;
+
+        //proses seleksi
+        if(kode_hari==1){
+            cout << "Senin" << endl;
+        }else if(kode_hari==2){
+            cout << "Selasa" << endl;
+        }else if(kode_hari==3){
+            cout << "Rabu" << endl;
+        }else if(kode_hari==4){
+            cout << "Kamis" << endl;
+        }else if(kode_hari==5){
+            cout << "Jumat" << endl;
+        }else if(kode_hari==6){
+            cout << "Sabtu" << endl;
+        }else if(kode_hari==7){
+            cout << "Minggu" << endl;
+        }else{
+            cout << "Kode hari salah" << endl;
+        }
+    }
+    </code>
+</pre>
+<h5 id="scase" class="section scrollspy">Pernyataan switch-case</h5>
+<p class="flow-text">Bentuk switch-case merupakan pernyataan yang dirancang khusus untuk menanggani pengambilan keputusan yang melibatkan sejumlah atau banyak alternative. Pernyataan switch-case ini memiliki kegunaan yang sama seperti if-else bertingkat, tetapi untuk memeriksa data yang bertipe karakter atau integer.
+Bentuk umum switch-case :</p>
+<pre>
+<code class="language-cpp">
+    Bentuk :
+    switch (controlling expression) {
+        case n1:
+        statement n1;
+        break;
+        case n2:
+        statement n2;
+        break;
+
+        case nn:
+        statement nn;
+        break;
+        default:
+        statementd;
+    }
+    </code>
+</pre>
+<p class="flow-text">Setiap cabang akan dijalankan jika syarat nilai konstanta terpenuhi dan default akan dijalankan jika semua cabang diatasnya tidak terpenuhi. Pernyataan break menunjukkan siap keluar dari switch. jika pernyataan ini tidak ada, maka program akan diteruskan ke cabang-cabang yang lainnya.</p>
+<p class="flow-text">Program berikut memberikan gambaran pemakaian switch. Program digunakan untuk membaca sebuah kode hari yang dimasukkan dari keyboard. Selanjutnya switch dimanfaatkan untuk menampilkan nama hari yang sesuai dengan masukan.</p>
+<pre>
+<code class="language-cpp">
+    // swhari.cpp
+    // Contoh pemakaian switch
+    // untuk menentukan nama hari
+
+    #include &lt;iostream.h>
+
+    void main(){
+        int kode_hari
+
+        cout << "Menentukan hari" << endl;
+        cout << "1=SENIN 3=RABU 5=JUMAT 7=MINGGU" << endl;
+        cout << "2=SELASA 4=KAMIS 6=SABTU" << endl;
+        cout << "Kode hari (1..7): ";
+        cin >> kode_hari;
+
+        //proses seleksi dengan switch
+        switch(kode_hari){
+            case 1:
+                cout << "Senin" << endl;
+                break;
+            case 2:
+                cout << "Selasa" << endl;
+                break;
+            case 3:
+                cout << "Rabu" << endl;
+                break;
+            case 4:
+                cout << "Kamis" << endl;
+                break;
+            case 5:
+                cout << "Jumat" << endl;
+                break;
+            case 6:
+                cout << "Sabtu" << endl;
+                break;
+            case 7:
+                cout << "Minggu" << endl;
+                break;
+            default:
+                cout << "Kode hari salah" << endl;
+                break;
+        }
+    }
+    </code>
+</pre>
+
+        </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+            
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+  </body>
+</html>
+      

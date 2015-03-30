@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="css/jQuizMe.css"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+
+    <main style="padding-bottom:0; padding-top:81px">
+        <div class="container" style="padding:0">
+          <div id="quizArea"/>
+        </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/jQuizMe-2.2.1.js"></script>
+
+<script type="text/javascript">
+document.addEventListener("deviceready", initDB(), false);
+var pak = "materi2";
+$( function($){
+  var quizMulti = {
+        multiList:[{
+          ques: "Mana dari pilihan berikut yang bukan merupakan syarat penamaan identifier yang benar?", 
+          ans: "Diawali angka", 
+          ansSel :["Diawali huruf", "Diawali garis bawah(_)", "Terdiri atas satu atau beberapa huruf, angka, dan/atau garis bawah(_)"] 
+        },{ 
+          ques: "Mana dari penamaan identifier berikut yang salah ?",
+          ans: "30foo",
+          ansSel:[ "foo30","_30foo","foo_30" ]
+        },{ 
+          ques: "Apa yang dimaksud dengan reserved word?",
+          ans: "identifier system yang mempunyai makna khusus bagi compiler, sehingga tidak dapat digunakan sebagai identifier",
+          ansSel:[ "suatu nama yang biasa dipakai dalam pemrograman", "wadah yang memiliki tipe data yang berfungsi untuk menampung suatu nilai", "kata yang harus digunakan dalam penamaan identifier" ]
+        },{ 
+          ques: "Mana yang merupakan reserved word?",
+          ans: "For",
+          ansSel:[ "To", "When", "Dont" ]
+        },{ 
+          ques: "Mana yang bukan merupakan reserved word?",
+          ans: "foo",
+          ansSel:[ "else", "double", "for" ]
+        },{ 
+          ques: "Mana dari tipe data berikut yang merupakan bilangan bulat?",
+          ans: "int",
+          ansSel:[ "float", "double", "long double" ]
+        },{ 
+          ques: "Mana dari tipe data berikut yang dapat menyimpan karakter?",
+          ans: "char",
+          ansSel:[ "int", "long", "float" ]
+        },{ 
+          ques: "Mana dari tipe data berikut yang merupakan bilangan pecahan?",
+          ans: "float",
+          ansSel:[ "int", "long", "char" ]
+        },{ 
+          ques: "Bagaimana karakteristik dari tipe data int?",
+          ans: "Untuk menyimpan bilangan bulat",
+          ansSel:[ "Untuk menyimpan karakter (huruf, angka, simbol)", "Untuk menyimpan bilangan pecahan", "Untuk menyimpan kata" ]
+        },{ 
+          ques: "Bagaimana karakteristik dari tipe data double?",
+          ans: "Untuk menyimpan bilangan pecahan",
+          ansSel:[ "Untuk menyimpan karakter (huruf, angka, simbol)", "Untuk menyimpan bilangan bulat", "Untuk menyimpan kata" ]
+        },{ 
+          ques: "Bagaimana contoh deklarasi variable yang benar?",
+          ans: "int foo",
+          ansSel:[ "foo int", "integer foo", "foo integer" ]
+        },{ 
+          ques: "Penamaan identifier yang tepat adalah", 
+          ans: "_operator", 
+          ansSel:[ "operator", "#operator", "1operator" ]
+        },{ 
+          ques: "Identifier biasa disebut juga dengan", 
+          ans: "Nama", 
+          ansSel:[ "Karakter", "Operator", "Variable" ]
+        },{ 
+          ques: "Kata yang memiliki makna khusus bagi compiler adalah", 
+          ans: "Reserved words", 
+          ansSel:[ "Identifier", "Compiler", "Variable" ]
+        },{ 
+          ques: "Yang tidak termasuk dalam kategor reserved words adalah", 
+          ans: "Word", 
+          ansSel:[ "Public", "Return", "Continue" ]
+        },{ 
+          ques: "Bahan mentah yang akan diolah menjadi informasi sehingga  dapat dipergunakan oleh user atau pemakai adalah", 
+          ans: "Data", 
+          ansSel:[ "Variable", "Konstanta", "Keywords" ]
+        },{ 
+          ques: "Tipe data yang berhubungan dengan bilangan bulat adalah", 
+          ans: "Long, char, int", 
+          ansSel:[ "Long, int, float", "Int, float, double", "Char, int, double" ]
+        },{ 
+          ques: "Cara mendeklarasikan variable dengan benar adalah", 
+          ans: "Int _public;", 
+          ansSel:[ "Int public", "Char public;", "Char _public" ]
+        },{ 
+          ques: "Fungsi variabel di dalam program adalah", 
+          ans: "menyimpan suatu nilai", 
+          ansSel:[ "Mendeklarasikan nama", "memasukan data data", "mengambil data" ]
+        },{ 
+          ques: "apa perbedaan variable dan konstanta", 
+          ans: "nilai variable dapat diubah, sedangkan konstanta tidak", 
+          ansSel:[ "nilai konstanta dapat diubah, sedangkan variable tidak", "variable memiliki nilai, sedangkan konstanta tidak ", "konstanta memiliki nilai, sedangkan variable tidak" ]
+        },{ 
+          ques: "contoh konstanta adalah", 
+          ans: "nilai phi", 
+          ansSel:[ "panjang", "luas", "lebar" ]
+        }
+        ]
+    /*tf:[
+      { ques: "cos( 30 degrees )", ans: "&#8730;3 / 2", ansSel: [ " &#8730;2 / 3", "1/4" ] },
+      { ques: "sin( 60 degrees )", ans: "&#8730;3 / 2", ansSel: [ "1/2", "&#8730;2" ] }       
+        ],
+        fill:[
+      { ques: "1/tan", ans: "cot" }, { ques: "1/cos", ans: "sec" }
+        ]*/
+  };
+  // quizMulti has 5 problems with 3 different quiz types.
+  options = {
+    intro: "Setelah mempelajari materi elemen dasar, kerjakan kuis ini.",
+    allRandom: true,
+    numOfQuizQues :5,
+    fxType:2,
+    title: "<i class= 'mdi-image-edit';></i> Quiz Materi 2",
+    disableDelete:true
+  };
+  
+  $( "#quizArea" ).jQuizMe( quizMulti, options );
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="quiz.html";
+      }
+    </script>
+  </body>
+
+</html>
+      

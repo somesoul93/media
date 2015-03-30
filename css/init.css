@@ -1,0 +1,36 @@
+.card a{
+	color: black;
+	margin-right: 20px;
+	-webkit-transition: color 0.3s ease;
+	-moz-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	-ms-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+	text-transform: uppercase;
+}
+
+.atas{
+	position: fixed;
+	top:90%;
+	left:80%;
+}
+
+nav.top-nav {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+  nav.top-nav a.page-title {
+    line-height: 122px;
+    font-size: 48px; }
+
+header, main, footer {
+  padding-left: 240px; }
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0; }
+ }
+
+ul.side-nav.fixed:hover {
+overflow-y: auto;
+}
+

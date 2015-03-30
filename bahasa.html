@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+  <script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="materi.html";
+      }
+    </script>
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+    <main style="text-align:center; padding-top:56px">
+        <i class= "mdi-editor-border-color" style="font-size:10em;"></i><br>
+        <h4>Bahasa Pemrograman</h4>
+        <br>
+        <a class='dropdown-button btn-large waves-effect waves-light light-blue lighten-1' href='#' data-activates='submateri1'>Pilih Sub Materi <i class="mdi-navigation-expand-more"></i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='submateri1' class='dropdown-content'>
+          <li><a href="#program" class="collection-item waves-effect">Apa itu Program?</a></li>
+          <li><a href="#komentar" class="collection-item waves-effect">Komentar</a></li>
+        </ul>
+
+    </main>
+    <main style="padding-bottom:0">
+        <div class="container" style="padding:0">
+      <a href="#top" class="atas btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="mdi-navigation-expand-less"></i></a>
+
+      <div id="program" class="section scrollspy">
+        <h5>Apa itu Program?</h5>
+<center><img class="responsive-img" src="images/skema.jpg"></img></center>
+<p class="flow-text">Program adalah sebuah barisan instruksi (biasa disebut programming statements), yang dieksekusi satu demi satu, yang biasanya secara berurutan, seperti yag terlihat pada bagan di atas.</p>
+<p class="flow-text"><b>Contoh :</b> program dibawah ini (Lingkaran.cpp) akan menghasilkan keluaran berupa luas dan keliling lingkaran. Perhatikan, setiap instruksi dieksekusi secara berurutan satu demi satu sesuai dengan baris program.</p>
+<pre>
+<code class="language-cpp">
+    #include &lt;iostream.h>
+    #include &lt;stdio.h>
+
+    int main(){
+      double jari, keliling,luas;
+      double pi = 3.14159265;
+
+      cout << "Masukkan Jari-Jari: ";
+      cin >> jari; //baca inputan keyboard
+
+      //Hitung Luas dan Keliling
+      luas = jari * jari * pi;
+      keliling = 2.0 * jari * pi;
+
+      //Tampilkan hasil
+      cout << "Panjang Jari-Jari " << jari << "." << endl;
+      cout << "Luas " << luas << "." << endl;
+      cout << "Keliling " << keliling << "." << endl;
+      return 0;
+    }
+  </code>
+</pre>
+<p class="flow-text">Keluaran Program :<p>
+<pre>
+<code class="language-cpp">
+    Masukkan Jari-Jari: 1.2
+    Panjang Jari-Jari 1.2.
+    Luas 4.52389.
+    Keliling 7.53982.
+  </code>
+</pre>
+<p class="flow-text">Penjelasan program :</p>
+<pre>
+<code class="language-cpp">
+    #include &lt;iostream.h>
+    #include &lt;stdio.h>
+    </code>
+</pre>
+<p class="flow-text">Baris ini bukanlah suatu pernyataan atau statement. Baris tersebut menginstruksikan kepada compiler untuk menyisipkan file lain (dalam hal ini file iostream.h dan stdio.h) saat profram dikompilasi. File dengan ekstensi .h disebut juga file header yang berisi berbagai deklarasi seperti fungsi, variable, dan sebagainya.</p>
+<pre>
+<code class="language-cpp">
+    double jari, keliling, luas;
+    double pi = 3.14159265;
+    </code>
+</pre>
+<p class="flow-text">kita mendeklarasikan tiga buah variable dengan tipe data double, yakni jari, keliling, dan luas. Tipe data double tidak sama dengan int, double dapat menyimpan nilai decimal (floating-point number).</p>
+<p class="flow-text">Kita juga mendeklarasikan variable double bernama pi, dan diinisialisasi nilainya, yakni 3.14159265</p>
+<pre>
+<code class="language-cpp">
+    cout << "Masukkan Jari-Jari: ";
+    cin >> jari;
+    </code>
+</pre>
+<p class="flow-text">kita menggunakan cout << untuk menampilkan pesan, dan cin >> untuk membaca inputan user ke dalam variable jari.</p>
+<pre>
+<code class="language-cpp">
+    luas = jari * jari * pi;
+    keliling = 2.0 * jari * pi;
+    </code>
+</pre>
+<p class="flow-text">melakukan penghitungan</p>
+<pre>
+<code class="language-cpp">
+    cout << "Panjang Jari-Jari " << jari << "." << endl;
+    cout << "Luas " << luas << "." << endl;
+    cout << "Keliling " << keliling << "." << endl;
+    </code>
+</pre>
+<p class="flow-text">menampilkan hasil.</p>
+<p class="flow-text">Perhatikan!</p>
+<blockquote>Baris kode yang ada di dalam main() akan dieksekusi satu persatu secara berurutan. </blockquote>
+<br>
+</div>
+
+
+<div id="komentar" class="section scrollspy">
+
+<h5>Komentar</h5>
+<p class="flow-text">Komentar adalah hal yang penting dalam program. Komentar adalah bagian yang tidak akan dieksekusi oleh program. Kamu akan membutuhkan program untuk memberikan penjelasan pada bagian tertentu seperti :</p>
+<ul>
+<li>Tujuan/fungsi program</li>
+<li>Kredit programmer untuk menuliskan revisi</li>
+<li>Keterangan-keterangan lain tentang keguanaan sejumlah pernyataan dalam program.</li>
+</ul>
+<p class="flow-text">Komentar juga berfungsi agar kode program dapat dipahami oleh programmer lain.</p>
+<p class="flow-text">Cara penulisan komentar ada dua jenis :</p>
+<ol>
+<li>
+<h6>Single line </h6>
+<p class="flow-text">Komentar diawali dengan dua garis miring (//). Semua tulisan yang terletak setelah tanda // hingga akhir baris tidak akan dieksekusi. Dengan kata lain komentar dengan // berlaku untuk satu baris</p>
+<p class="flow-text">Contoh :</p>
+<pre><code class="language-cpp">#include &lt;iostream.h>  // menyertakan file iostream.h</code></pre>
+<p class="flow-text">Pada contoh di atas, </p>
+<pre><code class="language-cpp">// menyertakan file iostream.h</code></pre>
+<p class="flow-text">tidak akan dieksekusi.</p>
+</li>
+<li>
+<h6>Multiline</h6>
+<p class="flow-text">Selain menggunakan //, komentar pada c++ dapat ditulis dalam bentuk :</p>
+<pre><code class="language-cpp"> /* komentar */</code></pre>
+<p class="flow-text">Komentar diawali dengan tanda /* dan diakhiri dengan */. Sepasang karakter tersebut bias diletakkan di baris yang berbeda, sehingga memungkinkan untuk membuat komentar beberapa baris :</p>
+<pre>
+<code class="language-cpp">
+    /*  ini 
+      Adalah contoh
+      Multiline comment c++
+    */
+</code>
+</pre>
+</li>
+</ol>
+</div>
+        </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+            
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+
+  </body>
+</html>
+      

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="css/jQuizMe.css"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+
+    <main style="padding-bottom:0; padding-top:81px">
+        <div class="container" style="padding:0">
+          <div id="quizArea"/>
+        </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/jQuizMe-2.2.1.js"></script>
+
+<script type="text/javascript">
+document.addEventListener("deviceready", initDB(), false);
+
+var pak = "materi3";
+$( function($){
+  var quizMulti = {
+        multiList:[{
+          ques: "Mana yang bukan merupakan sifat operator?",
+          ans: "Multinary",
+          ansSel:[ "Unary", "Binary", "Ternary" ]
+        },{
+          ques: "Mana yang bukan merupakan operator aritmatika?",
+          ans: "!",
+          ansSel:[ "+", "-", "%" ]
+        },{
+          ques: "Operator % digunakan untuk?",
+          ans: "Mendapatkan sisa bagi",
+          ansSel:[ "Mendapatkan hasil perkalian", "Mendapatkan hasil perpangkatan", "Mendapatkan hasil integral" ]
+        },{
+          ques: "Operator ++ digunakan untuk",
+          ans: "Menaikkan sebanyak 1 angka",
+          ansSel:[ "Menaikkan sebanyak 2 angka", "Menurunkan sebanyak 1 angka", "Menurunkan sebanyak 2 angka" ]
+        },{
+          ques: "Penulisan ekspresi ++foo  berarti",
+          ans: "Nilai dari variabel foo akan ditambahkan sebelum ekspresi dieksekusi",
+          ansSel:[ "Nilai dari variabel foo akan ditambahkan setelah ekspresi dieksekusi", "Nilai dari variabel foo akan ditambahkan dua kali sebelum ekspresi dieksekusi", "Nilai dari variabel foo akan ditambahkan dua kali setelah ekspresi dieksekusi" ]
+        },{
+          ques: "Operator != berarti",
+          ans: "Operator relasi tidak sama dengan",
+          ansSel:[ "Operator relasi sama dengan", "Operator increment", "Operator decrement" ]
+        },{
+          ques: "Operator AND dilambangkan dengan",
+          ans: "&amp;&amp;",
+          ansSel:[ "||", "&", "|" ]
+        }
+        ]
+    /*tf:[
+      { ques: "cos( 30 degrees )", ans: "&#8730;3 / 2", ansSel: [ " &#8730;2 / 3", "1/4" ] },
+      { ques: "sin( 60 degrees )", ans: "&#8730;3 / 2", ansSel: [ "1/2", "&#8730;2" ] }       
+        ],
+        fill:[
+      { ques: "1/tan", ans: "cot" }, { ques: "1/cos", ans: "sec" }
+        ]*/
+  };
+  // quizMulti has 5 problems with 3 different quiz types.
+  options = {
+    intro: "Setelah mempelajari materi operator, kerjakan kuis ini.",
+    allRandom: true,
+    numOfQuizQues :3,
+    fxType:2,
+    title: "<i class= 'mdi-image-edit';></i> Quiz Materi 3",
+    disableDelete:true
+  };
+  $( "#quizArea" ).jQuizMe( quizMulti, options );
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="quiz.html";
+      }
+    </script>
+  </body>
+
+</html>
+      

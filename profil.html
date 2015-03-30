@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+
+  
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    <header>
+      <nav>
+        <div class="nav-wrapper light-blue lighten-1">
+          <a href="#" class="brand-logo">Belajar C++</a>
+          <ul id="slide-out" class="side-nav full">
+            <li class="no-padding">
+              <li class="bold"><a href="menu.html">Menu Utama</a></li>
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main style="text-align:center; padding-top:56px">
+        <i class= "mdi-action-trending-up" style="font-size:10em;"></i><br>
+        <h4 id="nama">Profil</h4>
+        <br>
+    </main>
+    <main style="padding-bottom:0">
+        <script>
+          document.addEventListener("deviceready", initDB(), false);
+          myDB.transaction(function(transaction) {
+            transaction.executeSql("SELECT * FROM profil",[],
+              function(tx, result) {
+                  var dataLength = result.rows.length;
+                  console.log(dataLength);
+                  if(dataLength  > 0){
+                      nama = result.rows.item(0).nama;
+                      materi1 = result.rows.item(0).materi1;
+                      materi2 = result.rows.item(0).materi2;
+                      materi3 = result.rows.item(0).materi3;
+                      materi4 = result.rows.item(0).materi4;
+                      
+
+                      var valnam= document.getElementById('nama');
+                      var mat1= document.getElementById('mat1');
+                      var mat2= document.getElementById('mat2');
+                      var mat3= document.getElementById('mat3');
+                      var mat4= document.getElementById('mat4');
+                      var tot= document.getElementById('tot');
+
+                      var perc1= document.getElementById('perc1');
+                      var perc2= document.getElementById('perc2');
+                      var perc3= document.getElementById('perc3');
+                      var perc4= document.getElementById('perc4');
+                      var perctotal= document.getElementById('perctotal');
+
+                      var nilaitotal = (Number(materi1)+Number(materi2)+Number(materi3)+Number(materi4))/4;
+
+                      valnam.innerHTML=nama;
+
+                      perc1.innerHTML=materi1+" %";
+                      perc2.innerHTML=materi2+" %";
+                      perc3.innerHTML=materi3+" %";
+                      perc4.innerHTML=materi4+" %";
+                      perctotal.innerHTML=nilaitotal+" %";
+
+                      mat1.setAttribute("style","width :"+materi1+"%");
+                      mat2.setAttribute("style","width :"+materi2+"%");
+                      mat3.setAttribute("style","width :"+materi3+"%");
+                      mat4.setAttribute("style","width :"+materi4+"%");
+                      tot.setAttribute("style","width :"+nilaitotal+"%");
+                  }else{
+                    console.log("No profile found having this profile id."); 
+                  }
+
+              }, 
+            function(error) {
+                console.log("Error occurred while getting the data.");
+            });
+          }); 
+        </script>
+        <div class="container" style="padding:0">
+          <h5>Penguasaanmu : <span id="perctotal" style="float: right;">1</span></h5>
+          <div class="progress">
+              <div id="tot" class="determinate"></div>
+          </div>
+          <br><br>
+          <h6>Materi 1 - Bahasa Pemrograman : <span id="perc1" style="float: right;">1</span></h6>
+          <div class="progress">
+              <div id="mat1" class="determinate"></div>
+          </div>
+          <br>
+          <h6>Materi 2 - Elemen Dasar : <span id="perc2" style="float: right;">1</span></h6>
+          <div class="progress">
+              <div id="mat2" class="determinate"></div>
+          </div>
+          <br>
+          <h6>Materi 3 - Operator : <span id="perc3" style="float: right;">1</span></h6>
+          <div class="progress">
+              <div id="mat3" class="determinate"></div>
+          </div>
+          <br>
+          <h6>Materi 4 - Kondisi & Perulangan : <span id="perc4" style="float: right;">1</span></h6>
+          <div class="progress">
+              <div id="mat4" class="determinate"></div>
+          </div>
+      </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+            
+
+    <!--Import jQuery before materialize.js-->
+    
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="menu.html";
+      }
+    </script>
+  </body>
+</html>
+      

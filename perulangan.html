@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+  <script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="materi.html";
+      }
+    </script>
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+    <main style="text-align:center; padding-top:56px">
+        <i class= "mdi-action-autorenew" style="font-size:10em;"></i><br>
+        <h4>Perulangan</h4>
+        <br>
+        <a class='dropdown-button btn-large waves-effect waves-light light-blue lighten-1' href='#' data-activates='submateri1'>Pilih Sub Materi <i class="mdi-navigation-expand-more"></i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='submateri1' class='dropdown-content'>
+          <li><a href="#pendahuluan" class="collection-item waves-effect">Pendahuluan</a></li>
+          <li><a href="#pwhile" class="collection-item waves-effect">Pernyataan while</a></li>
+          <li><a href="#pdowhile" class="collection-item waves-effect">Pernyataan do-while</a></li>
+          <li><a href="#pfor" class="collection-item waves-effect">Pernyataan for</a></li>
+        </ul>
+    </main>
+    <main style="padding-bottom:0">
+        <div class="container" style="padding:0">
+
+      <a href="#top" class="atas btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="mdi-navigation-expand-less"></i></a>
+
+<h5 id="pendahuluan" class="section scrollspy">Pendahuluan</h5>
+<p class="flow-text">Untuk memanipulasi perulangan, terdapat beberapa pernyataan yang dapat digunakan. Tiap tiap pernyataan memiliki karakteristik masing-masing. Berikut penjelasannya :</p>
+
+<h5 id="pwhile" class="section scrollspy">Pernyataan while</h5>
+<p class="flow-text">While adalah salah saru pernyataan yang berfungsi untuk memproses suatu pernyataan atau beberapa pernyataan beberapa kali. Bentuk umumnya :</p>
+<pre>
+<code class="language-cpp">
+    while(ungkapan){  
+        pernyataan1;
+        pernyataan2;
+    }
+    </code>
+</pre>
+<p class="flow-text">Pernyataan1 dan pernyataan2 akan dieksekusi selama ungkapan bernilai benar. Sehingga pernyataan while dapat digambarkan pada diagram alir berikut :</p>
+<center><img class="responsive-img" src="images/ulang1.jpg"></img></center>
+<p class="flow-text">Berikut adalah contoh penggunaan while dalam program :</p>
+<pre>
+<code class="language-cpp">
+    // cpp10x.cpp
+    // Contoh pemakaian while
+    // untuk menampilkan tulisan sebanyak 10 kali
+
+    #include &lt;iostream.h>
+
+    void main(){
+        int i;                 //Variabel penghitung
+
+        i = 0;                 //mula-mula isi dengan nol
+        while(i < 10){
+            cout << "C++" << endl;
+            i++;               //naikkan hitungan 1 kali
+        }
+    }
+    </code>
+</pre>
+
+<h5 id="pdowhile" class="section scrollspy">Pernyataan Do-While</h5>
+<p class="flow-text">Sedikit berbeda dengan pernyataan while, pernyataan do-while akan mengeksekusi pernyataan minimal 1 kali saat ungkapan bernilai false. Bentuk umum dari do while adalah :</p>
+<pre>
+<code class="language-cpp">
+    do{
+        Pernyataan1;
+        Pernyataan2;
+    }while(ungkapan);
+    </code>
+</pre>
+<p class="flow-text">Pernyataan 1 dan pernyataan 2 dieksekusi sampai ungkapan bernilai salah. Berikut diagram alir pernyataan do-while :</p>
+ <center><img class="responsive-img" src="images/ulang2.jpg"></img></center>
+<p class="flow-text">Berikut contoh penggunaan do while :</p>
+
+<pre>
+<code class="language-cpp">
+    // cpp10x2.cpp
+    // Contoh pemakaian do=while
+    // untuk menampilkan tulisan sebanyak 10 kali
+
+    #include &lt;iostream.h>
+
+    void main(){
+        int i;              //Variabel penghitung
+
+        i = 0;              //mula -mula isi dengan nol
+        do{
+            cout << "C++" << endl;
+            i++;            //naikkan hitungan 1 kali
+        }while(i < 10);
+    }
+    </code>
+</pre>
+<h5 id="pfor" class="section scrollspy">Pernyataan for</h5>
+<p class="flow-text">Pernyataan for juga berguna untuk mengulak pengeksekusian terhadap satu atau sejumlah pernyataan. Bentuk umum pernyataan for adalah sebagai berikut :</pre>
+<pre>
+<code class="language-cpp">
+    for(ungkapan1;ungkapan2;ungkapan3){
+        pernyataan;
+    }
+    </code>
+</pre>
+<p class="flow-text">Pernyataan di atas identik dengan :</p>
+<pre>
+<code class="language-cpp">
+    ungkapan1;
+    while(ungkapan2){
+        pernyataan;
+    ungkapan3;
+    }
+    </code>
+</pre>
+<p class="flow-text">Jadi :</p>
+<ul class="collection">
+<li class="collection-item">Ungkapan1 adalah pernyataan inisialisasi sebelum masuk ke while.</li>
+<li class="collection-item">Ungkapan2 berlaku sebagai kondisi yang menentukan perulangan dilanjutkan atau tidak</li>
+<li class="collection-item">Ungkapan3 digunakan sebagai pengatur variable yang digunakan dalam ungkapan1</li>
+</ul>
+<p class="flow-text">Berikut adalah contoh penggunaan for :</p>
+<pre>
+<code class="language-cpp">
+    // cpp10x3.cpp
+    // Contoh pemakaian for
+    // untuk menampilkan tulisan sebanyak 10 kali
+
+    #include &lt;iostream.h>
+
+    void main(){
+        int i;          //Variabel penghitung
+
+        for(i=0 ; i < 10 ; i++){
+            cout << "C++" << endl;
+        }
+    }
+    </code>
+</pre>
+
+
+
+      </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+            
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+  </body>
+</html>
+      

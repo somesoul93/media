@@ -1,0 +1,559 @@
+.  	Tahun 1989, dunia pemrograman C mengalami peristiwa penting dengan dikeluarkannya standar bahasa C oleh ….
+A. 	ANSI
+B. 	ASI
+C. 	SNI
+D. 	ISNA
+E. 	NSIA
+2.  	Kompilasi atau kompile (compile) adalah ….
+A. 	proses membuat source code
+B. 	proses merubah source code ke bahasa C
+C. 	proses untuk mendeteksi kesalahan penulisan source code
+D. 	proses merubah source code ke bahasa mesin sehingga bisa dieksekusi atau dijalankan
+E. 	proses merubah source code ke bahasa C sehingga dapat diedit setiap saat oleh user
+3.  	Tipe data dengan range / jangkauannya - 3.4E-38 s/d 3.4E+38 adalah ….
+A. 	float
+B. 	void
+C. 	char
+D. 	int
+E. 	double
+4.  	Bagian dari program yang akan  diabaikanoleh compiler adalah….
+A. 	variabel
+B. 	tipe data
+C. 	konstanta
+D. 	identifiers
+E. 	komentar
+5.  	Perhatikan bentuk umum untuk mengatur tampilan bilangan pecahan (float) di bawah ini printf(“%m.nf”, argument); Huruf “n” pada coding tersebut berfungsi untuk ….
+A. 	nilai atau variable yang akan ditampilkan
+B. 	menyatakan jumlah digit di belakang koma
+C. 	menyatakan panjang range
+D. 	menyatakan variable nilai
+E. 	menampilkan data string
+6.  	Di bawah ini adalah operator matematika yang digunakan dalam bahasa C, kecuali ….
+A. 	*
+B. 	/
+C. 	%
+D. 	:
+E. 	+
+7.  	Outputyang dihasilkan dari operasi a = 5 + 7 % 2 adalah ….
+A. 	5
+B. 	6
+C. 	7
+D. 	8
+E. 	9
+8.  	Keyworddalam bahasa C berjumlah ….
+A. 	29
+B. 	30
+C. 	31
+D. 	32
+E. 	33
+9.  	Suatu variabel yang berisi alamat memori dari suatu variabel lain adalah ….
+A. 	array
+B. 	variable
+C. 	konstanta
+D. 	value
+E. 	pointer
+10.  	Di bawah ini adalah compiler bahasa C, kecuali ….
+A. 	Bloodshed Dev-C++
+B. 	Microsoft Visual C++ 2005 Express
+C. 	Apple Xcode for Mac OS X
+D. 	GNU C/C++ Compiler
+E. 	C++ compiler for widows 
+
+
+
+ 1. Dalam menyusun suatu program,langkah pertama yang harus di lakkukan adalah :
+   
+    a. Membuat program
+    b. Membuat Algoritma
+    c. Membeli komputer
+    d. Proses
+    e. Mempelajari program 
+
+2. Sebuah prosedur langkah demi langkah yang pasti untuk menyelesaikan sebuah   masalah di sebut :
+  
+    a. Proses
+    b. Program
+    c. Algoritma
+    d. Step
+
+3. Pseudocode yang di gunakan pada penulisan algoritma berupa :
+  
+   a. Bahassa Inggris
+   b. Bahasa Puitis
+   c. Bahasa pemograman
+   d. Sembarang bahasa asal terstruktur
+
+4. Pada pembuatan program komputer, algoritma dibuat :
+   
+   a. Sebelum pembuatan program
+   b. Pada saat program dibuat
+   c. Sesudah pembuatan program
+   d. Pada saat verifikasi program
+
+5. Tahapan dalam menyelesaikan suatu masalah adalah :
+  
+   a. Masalah-Pseudocode-Flowchart-Program-Eksekusi-Hasil
+   b. Masalah-Algoritma-Flowchart-Program-Eksekusi-Hasil
+   c. Masalah-Model-Algoritma-Eksekusi-Hasil
+   d. Masalah-Model-Algoritma-Program-Eksekusi-hasil 
+   e. Algoritma-Program-Model-Eksekusi-Hasil
+
+6. Diketahui bahwa kantong P kosong. Kantong Q berissi 10 buah kelereng dan kantong R berisi 15 kelereng. Apabila yang terbawa hanya sebuah kantong dan di katakan BUKAN kantong P yang terbawa, Maka jumlah kelereng yang terbawa adalah : 
+  
+   a. 10
+   b. 15
+   c. 10 atau 15
+   d. 10 dan 15
+   e. Kosong
+
+7. Diberikan algoritma : Apabila warna merah maka jadi hijau. Apabila warna hijau maka jadi putih, selain warna merah dan hijau maka jadi ungu. Jika kondisi input warna adalah hitam, maka warna jadi :
+   
+   a. Merah
+   b. Ungu
+   c. Hijau 
+   d. Putih
+   e. Abu-abu
+
+8. Instruksi P=Q akan mengakibatkan nilai P=nilaiQ,dan nilai Q menjadi :
+
+   a. Menjadi Sembarang Nilai
+   b. Menjadi hampa 
+   c. Q tetap 
+   d. Menjadi 10
+   e. P tetap
+
+9. Apabila a=5, b=10, maka jika di berikan instruksi a=b; b=a akan mengakibatkan :
+
+   a. a=0 , b=5
+   b. a=10 , b=5
+   c. a=10 , b=0
+   d. a=b
+   e. a=10 , b=10
+
+10. Di berikan algoritma P=10; P=P+5; Q=P. Nilai P dan Q masing-masing adalah :
+
+   a. 15 dan 0
+   b. 0 dan 15
+   c. 15 dan 15
+   d. 0 dan 10
+    e. 10 dan 15
+
+II. ESSAI
+
+  Membuat program sederhana dengan menggunakan C++
+
+    Menghitung Luas Segitiga
+    Menghitung Luas Persegi Panjang
+    Menghitung Luas Bujur Sangkar
+
+
+JAWABAN PILIHAN GANDA
+
+    B
+    C
+    D
+    A
+    D
+    C
+    B
+    E
+    E
+    C 
+
+
+
+    1. Bahasa Pemograman C++ diciptakan satu decade setelah bahasa pemograman C. diciptakan oleh Bjarne Strourstroup dari Laboratorium Bell, AT&T pada tahun ? (Jawaban : C.1983)
+
+a. 1987
+b. 1982
+c. 1983
+d. 1980
+
+2. Bahasa Pemograman C++ diberi nama oleh Rick Mascitti, namun pada awal pembuatannya di beri nama?(Jawaban : A. A better C)
+a. A better C
+b. A better A
+c. A better B
+d. A better D
+
+3. Apa keistimewaan Bahasa Pemograman C++ ? (Jawaban : C)
+a. Termasuk Bahasa Pemogramanan tingkat menengah
+b. Memudahkan dalam pengembangan dan pembuatan program
+c. Bahasa Pemograman C++ mendukung OOP (Object Oriented Programming
+d. Mudah dipindahkan dari satu mesin ke mesin lain
+
+
+
+4. Compiler C++ yang telah beredar di pasaran antara lain, kecuali? (Jawaban : D)
+a. Microsoft C/C++
+b. Visual C++
+c. Turbo C++
+d. Pascal ++
+
+5. Hal yang menjadi catatan penting dalam pemograman C++ bahwa Program C++ bersifat Case Sensitive. Maksud dari sifat tersebut adalah…….. (Jawaban : C)
+a. Semua character di anggap sama
+b. Huruf kecil dan besar disamakan
+c. Huruf besar dan kecil di anggap beda
+d. Tidak boleh memakai 2 file header
+
+6. Dibawah ini merupakan type data bilangan bulat, kecuali (jawaban : B)
+a. Char
+b. Double (real double)
+c. Int (integer)
+d. Short (short integer)
+
+7. Perintah Cin pada Program C++ digunakan untuk ? ( Jawaban : A)
+a. Menginput suatu nilai dari suatu piranti masukan (keyboard)
+b. Menampilkan data pada layar
+c. Mpendeklarasian variable
+d. Mengulang proses looping pada program
+
+Program di bawah ini untuk no. 8 – 10
+
+Program C++
+// my first program in C++
+#include
+Int main()
+{
+Cout<<”Hello My World !”; Cout<<”I’m a Student Of Gunadarma University”; Return 0; } 8. Dari program diatas, manakah yang termasuk komentar (Jawaban : D) a. Hello My World ! b. Int main() c. // my first program in C++ d. #include
+
+9. Yang termasuk File Header diatas adalah (Jawaban : D)
+a. Hello My World
+b. Int main()
+c. // my first program in C++
+d. #include
+
+10. Hasil Program diatas adalah (Jawaban : C)
+
+a. Hello World!
+b. I'm a Student Of Gunadarma University
+c. Hello My World ! I’m a Student Of Gunadarma University
+d. My first program in C++
+
+
+
+
+
+1.      File header yang digunakan supaya perintah cin dan cout dapat dipakai adalah
+
+
+a.       conio.h
+b.      iostream.h
+c.       iomanip.h
+d.      math.h
+
+
+2.      Tipe-tipe data berikut akan memberi nilai output kecuali
+
+a.       int
+b.      float
+c.       void
+d.      char
+
+
+3.      Pemberian nilai konstanta di bawah ini yang benar adalah
+
+a.       #define phi = 3.14;
+b.      const int lebar 100;
+c.       const float phi = 3.14;
+d.      const kodepos = 55000;
+
+
+4.      Statement program berikut ini salah kecuali
+
+a.       int double = 40;
+b.      cout >> count;
+c.       */ komentar /*
+d.       M = n =3;
+
+
+5.      Dari pernyataan di bawah ini :
+ int x = 2;
+ while (x < 0) {
+    cout << 'X';
+ }
+Berapa kali X ditampilkan
+
+a.       0
+b.      1
+c.       2
+d.      3
+
+
+6.      Diketahui potongan program berikut:
+a = 2; b = a++  - 1;
+Setelah perintah di atas dijalankan, maka nilai a dan b secara berurutan adalah :
+
+a.       2 dan 1
+b.      3 dan 1
+c.       1 dan 2
+d.      1 dan 3
+
+
+7.      Dari nilai a dan b pada soal di atas, tentukan nilai dari pernyataan berikut :             
+(b>a) ? 1 : 3
+
+a.       3
+b.      1
+c.       Pernyataan salah
+d.      Tidak ada yang benar
+
+
+8.      Berikut ini adalah tipe data dalam C + + ….
+
+a.       int, float, char, double, const
+b.      int, float, char, double
+c.       float, doublefloat, longint, const
+d.      label, const, int, shortint
+
+
+9.      Syarat pemberian nama identifier adalah sebagai berikut , kecuali ….
+a.       Panjang maksimal suatu variabel 32 karakter
+b.      Boleh menggunakan spasi
+c.       Jangan diawali dengan angka
+d.      Tidak ada tanda operator
+
+10.  Tanda yang diberikan untuk komentar satu baris dalam program adalah ….
+
+a.       ??
+b.      //
+c.       ||
+d.      /*  ….. */
+
+
+11.  Perintah include harus diawali dengan ….
+
+a.       >>
+b.      //
+c.       #
+d.      &
+
+
+12.  File header yang digunakan untuk fungsi cout<< adalah ….
+
+a.       math.h
+b.      stdio.h
+c.       iostream.h
+d.      conio.h
+
+
+13.  Perintah input yang biasa digunakan pada C++ adalah ….
+
+a.       cout
+b.      cin
+c.       scanf
+d.      printf
+
+
+14.  File header yang digunakan untuk fungsi getch() adalah ….
+
+a.       math.h
+b.      stdio.h
+c.       iostream.h
+d.      conio.h
+
+
+15.  File header yang digunakan untuk fungsi printf adalah ….
+
+a.       constrea.h
+b.      stdio.h
+c.       iostream.h
+d.      conio.h
+
+
+16.  Operator tidak sama dengan dalam C++ adalah ….
+
+a.       = =
+b.      =!
+c.       ≠
+d.      ! =
+
+
+17.  Bentuk umum perintah pengulangan dengan for adalah ….
+a.       for var := awal to akhir do
+b.      for (inisialisasi , syarat pengulangan , perubahan nilai )
+c.       for (inisialisasi ; perubahan nilai ; syarat pengulangan)
+d.      for (inisialisasi ; syarat pengulangan ; perubahan nilai)
+
+18.  Pernyataan berikut adalah benar, kecuali:
+a.       Bagian pernyataan yang mengikuti while  akan dieksekusi selama ungkapan  pada while bernilai benar
+b.      Pengujian ungkapan pada do ... while dilakukan sebelum bagian pernyataan
+c.       Ada kemungkinan bagian pernyataan yang mengikuti while tidak dijalankan sama sekali
+d.      Bagian pernyataan yang berada dalam tubuh do ... while minimal akan dijalankan satu kali.
+
+
+19.  Operator logika && adalah ….
+
+a.       nand
+b.      or
+c.       and
+d.      not and
+
+
+20.  Penentu format integer pada printf adalah….
+
+a.       % d
+b.      % c
+c.       % s
+d.      % f
+
+
+21.  Penentu format string pada printf adalah….
+
+a.       % d
+b.      % c
+c.       % s
+d.      % f
+
+
+22.  Escape sequence \n mempunyai pengertian ….
+
+a.       mundur satu karakter
+b.      maju satu tabulasi
+c.       kembali ke awal
+d.      baris baru
+
+
+23.  Tanda yang diberikan untuk komentar lebih dari satu baris adalah ….
+
+a.       ??
+b.      //
+c.       { }
+d.      /* ... */
+
+
+24.  Escape sequence \t mempunyai pengertian ….
+
+a.       mundur satu karakter
+b.      maju satu tabulasi
+c.       kembali ke awal
+d.      baris baru
+
+
+25.  Tipe data yang digunakan untuk bilangan pecahan adalah ….
+a. char              b. int                c. float             d. long            
+
+26.  Operator pemberian nilai/penugasan/assigment adalah ….
+a. =                  b. = =               c. ! =                d. <>
+
+27.  # include <iostream.h> dan # include <conio.h> disebut ….
+
+a.       variabel
+b.      identifier
+c.       operator
+d.      file header
+
+
+28.  Pernyataan a=7 % 4 akan menghasilkan a =  ....
+a. 1                  b. 2                  c. 3                  d. 4
+
+29.  Operator yang digunakan untuk menaikkan nilai variabel sebesar satu adalah….
+a. + +               b. = =               c. >>                d. <<
+
+30.  Suatu pengenal untuk menyimpan nilai tertentu yang tetap (tidak dapat diubah) digunakan ….
+
+a.       variabel
+b.      keyword
+c.       konstanta
+d.      identifier
+
+
+
+
+
+
+
+
+Untuk mengerjakan soal no 31 s/d 33 perhatikan program dibawah ini :
+#include <iostream.h>
+int main() {
+    int a, b, c;
+    cout << "Masukkan bilangan = ";
+    cin >> b;
+    for (a = 1 ; a <= b; a++ ) {
+        for ( c = 1 ; c <= a ; c++ ) {
+            cout << c << " ";
+        }
+        cout << "\n";
+    }
+    return 0 ;
+}
+31.  Jika b diberikan nilai 3 pada program diatas, maka hasil program adalah ….
+a. 1                        b. 1                  c. 1 2 3            d. 2                  e. 5
+    2 2                         1 2                   1 2 3                3 4                   5 4
+    3 3 3                      1 2 3                1 2 3                4 5 6                5 4 3
+
+32.  Jika b diberikan nilai 3 dan for (c=1; c<=a; c++) diubah menjadi
+for (c=1 ; b>=c; c++) pada program diatas, maka hasil program adalah ….
+a. 1                        b. 1                  c. 1 2 3            d. 2                  e. 5
+    2 2                         1 2                   1 2 3                3 4                   5 4
+    3 3 3                      1 2 3                1 2 3                4 5 6                5 4 3
+
+33.  Jika b diberikan nilai 3 dan cout << c << " "; diubah cout << a << " "; pada
+program diatas, maka hasil program adalah ….
+a. 1                        b. 1                  c. 1 2 3            d. 2                  e. 5
+    2 2                         1 2                   1 2 3                3 4                   5 4
+    3 3 3                      1 2 3                1 2 3                4 5 6                5 4 3
+
+34.  Jika b diberikan nilai 3 dan cout << c << " "; diubah cout << a+c << " "; pada program diatas, maka hasil program adalah ….
+a. 1                        b. 1                  c. 1 2 3            d. 2                  e. 5
+    2 2                         1 2                   1 2 3                3 4                   5 4
+    3 3 3                      1 2 3                1 2 3                4 5 6                5 4 3
+
+Untuk mengerjakan soal no 35 s/d 37 perhatikan program dibawah ini :
+#include <iostream.h>
+main () {
+    int a,n;
+    cout << " Masukkan pilihan anda [1 - 3] = ";
+    cin >> n;
+    if (n==1) {
+        for ( a = 1 ; a <= n ; a ++)
+            printf("%2d ", n*a);
+    } else if (n==2) {
+        for ( a = 1 ; a <= n ; a ++)
+            printf("%2d ", n*a);
+    } else if (n==3) {
+        for ( a = 1 ; a <= n ; a ++)
+            printf("%2d ", n*a);
+    }
+    return 0 ;
+}
+35.  Jika program di atas dijalankan dan pilihannya = 1 , hasil program adalah ….
+a. 1            b. 2 4               c. 21                d. 3 6 9            e. 23 26 29
+
+36.  Jika program di atas dijalankan dan pilihannya = 2 , hasil program adalah ….
+a. 1            b. 2 4               c. 21                d. 3 6 9            e. 23 26 29
+
+37.  Jika program di atas dijalankan dan pilihannya = 3 , hasil program adalah ….
+a. 1            b. 2 4               c. 21                d. 3 6 9            e. 23 26 29
+
+Untuk mengerjakan soal no 38 s/d 40 perhatikan program dibawah ini :
+#include <iostream.h>
+main ( ) {
+    int a=1, b, n;
+    cout << "Nilai = ";
+    cin >> n;
+    while ( a<=n ) {
+        b = a;
+        while ( b<=n ) {
+            cout << b*a << " ";
+            b++;
+        }
+        cout << "\n";
+        a++;
+    }
+    return 0 ;
+}
+38.  Jika program diatas dijalankan dan Nilai = 3, maka hasil program adalah ….
+a. 1 2 3      b. 1                  c. 1 2 3            d. 3                  e. 1 2 3
+          4 6             2 1                   2 4 6                2 3                   2 3
+          9                3 2 1                3 6 9                1 2 3                3
+
+39.  Jika Nilai = 3,  dan b=a diubah menjadi b=1 maka hasil program adalah ….
+a. 1 2 3      b. 1                  c. 1 2 3            d. 3                  e. 1 2 3
+          4 6             2 1                   2 4 6                2 3                   2 3
+          9                3 2 1                3 6 9                1 2 3                3
+
+40.  Jika Nilai = 3, dan cout << b*a << " "; diubah menjadi cout << b << " "; maka hasil program adalah ….
+a. 1 2 3      b. 1                  c. 1 2 3            d. 3                  e. 1 2 3
+          4 6             2 1                   2 4 6                2 3                   2 3
+          9                3 2 1                3 6 9                1 2 3                3

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+  <script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="materi.html";
+      }
+    </script>
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+    <main style="text-align:center; padding-top:56px">
+        <i class= "mdi-action-shop" style="font-size:10em;"></i><br>
+        <h4>Elemen Dasar C++</h4>
+        <br>
+
+        <a class='dropdown-button btn-large waves-effect waves-light light-blue lighten-1' href='#' data-activates='submateri1'>Pilih Sub Materi <i class="mdi-navigation-expand-more"></i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='submateri1' class='dropdown-content'>
+          <li><a href="#identifier" class="collection-item waves-effect">Identifier</a></li>
+          <li><a href="#reserved" class="collection-item waves-effect">Reserved Word</a></li>
+          <li><a href="#tipedata" class="collection-item waves-effect">Tipe Data</a></li>
+          <li><a href="#variabel" class="collection-item waves-effect">Variabel</a></li>
+        </ul>
+    </main>
+    <main style="padding-bottom:0">
+        <div class="container" style="padding:0">
+
+      <a href="#top" class="atas btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="mdi-navigation-expand-less"></i></a>
+
+<h5 id="identifier" class="section scrollspy">Identifier</h5>
+<p class="flow-text">Identifier atau pengenal adalah suatu nama yang biasa dipakai dalam pemrograman untuk menyatakan :</p>
+<ol>
+<li>Variable</li>
+<li>Konstanta</li>
+<li>Tipe data</li>
+<li>Fungsi</li>
+<li>Label</li>
+<li>Obyek</li>
+</ol>
+<p class="flow-text">Identifier bias disebut juga nama yang diciptakan oleh programmer.</p>
+<p class="flow-text">Penamaan identifier terdiri atas satu atau beberapa karakter huruf, angka, dan/atau garis bawah(_), serta harus diawali dengan huruf atau garis bawah(_)</p>
+<h5 id="reserved" class="section scrollspy">Reserved word</h5>
+<p class="flow-text">Reserved word atau juga bisa disebut keyword, adalah identifier system yang mempunyai makna khusus bagi compiler. Karena itu keyword tidak dapat digunakan sebagai identifier. Berikut adalah reserved word pada C++ :</p>
+
+
+    <div class="row">
+
+      <div class="col s4">
+Asm
+Auto
+Break
+Case
+Char class
+Const
+Continue
+Default
+Delete
+Do
+Double
+Else
+Enum
+Extern      </div>
+      <div class="col s4">
+Float
+For
+Friend
+Goto
+If
+Inline
+Int
+Long
+New
+Operator
+Private
+Protected
+Public
+Register
+Return
+      </div>
+      <div class="col s4">
+Sort
+Signed
+Sizeof
+Static
+Struct
+Switch
+Template
+This
+Typedef
+Union
+Unsigned
+Virtual
+Void
+While
+ 
+      </div>
+
+    </div>
+
+ 
+<h5 id="tipedata" class="section scrollspy">Tipe data</h5>
+<p class="flow-text">Tipe data pada C++ meliputi :</p>
+<ul>
+<li>char</li>
+<li>int</li>
+<li>long</li>
+<li>float</li>
+<li>double</li>
+<li>long double</li>
+</ul>
+<p class="flow-text">tipe data yang berhubungan dengan bilangan bulat adalah char, int, dan long. Sedangkan lainnya berhubungan dengan bilangan pecahan.</p>
+<p class="flow-text">Berikut adalah ukuran berbagai tipe data dasar :</p>
+<table class="responsive-table">
+  <thead>
+  <tr>
+    <th> Tipe Data </th><th> Ukuran Memori </th><th> Jangkauan (range)</th><th> Jumlah digit presisi </th><th>Format</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td> Char </td><td>1 byte </td><td>-128 hingga 127</td><td>-</td><td>%c</td>
+  </tr>
+  <tr>
+    <td> Int </td><td>2 byte </td><td>-32768 hingga 32767</td><td>-</td><td>%i,%d</td>
+  </tr>
+  <tr>
+    <td> Long </td><td>4 byte </td><td>-2.147.438.648 hingga 2.147.438.647</td><td>-</td><td></td>
+  </tr>
+  <tr>
+    <td> Float </td><td>4 byte </td><td>3.4x10-38 hingga 3.4x1038</td><td>6-7</td><td>%f</td>
+  </tr>
+  <tr>
+    <td> Double </td><td>8 byte </td><td>1.7x10-308 hingga 3.4x10308</td><td>15-16</td><td>%lf</td>
+  </tr>
+  <tr>
+    <td> Long double </td><td>10 byte </td><td>3.4x10-4932 hingga 1.1x104832</td><td>19</td><td></td>
+  </tr>
+  </tbody>
+</table>
+
+<h5 id="variabel" class="section scrollspy">Variabel & Konstanta</h5>
+<p class="flow-text"><b>Variabel</b> bisa dikatakan sebagai wadah yang memiliki tipe data yang berfungsi untuk menampung suatu nilai. Nilai yang terdapat dalam variable dapat diubah sesuai kebutuhan selama program berjalan.</p>
+<p class="flow-text">Untuk mendeklarasikan atau mengenalkan sebuah variable, dilakukan dengan format :</p>
+<pre>
+<code class="language-cpp">
+  tipe_data nama_variabel
+    </code>
+</pre>
+<p class="flow-text">contoh pendeklarasian variable :</p>
+<pre>
+<code class="language-cpp">
+  int jumlah;
+  float harga,total;
+    </code>
+</pre>
+<p class="flow-text">penugasan atau pengisian nilai variable, dapat dilakukan dengan menggunakan operator penugasan (=)</p>
+<p class="flow-text">contoh pemberian nilai 10 ke variable jumlah :</p>
+<pre>
+<code class="language-cpp">
+  jumlah = 10;
+    </code>
+</pre>
+<p class="flow-text"><b>Konstanta</b> adalah juga bisa dikatakan sebagai wadah, namun nilainya tidak difungsikan untuk dapat diubah.</p>
+
+      </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+            
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+  </body>
+</html>
+      

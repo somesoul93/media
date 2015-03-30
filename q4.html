@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="css/jQuizMe.css"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+
+    <main style="padding-bottom:0; padding-top:81px">
+        <div class="container" style="padding:0">
+          <div id="quizArea"/>
+        </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/jQuizMe-2.2.1.js"></script>
+
+<script type="text/javascript">
+document.addEventListener("deviceready", initDB(), false);
+var pak = "materi4";
+$( function($){
+  var quizMulti = {
+        multiList:[{
+          ques: "Bagaimana bentuk umum pernyataan if?",
+          ans: '<img src="images/q4n1a.jpg">',
+          ansSel:[ '<img src="images/q4n1b.jpg">', '<img src="images/q4n1c.jpg">', '<img src="images/q4n1d.jpg">' ]
+        },{
+          ques: "Bagaimana bentuk umum pernyataan if - elseif?",
+          ans: '<img src="images/q4n2a.jpg">',
+          ansSel:[ '<img src="images/q4n2b.jpg">', '<img src="images/q4n2c.jpg">', '<img src="images/q4n2d.jpg">' ]
+        },{
+          ques: "Perhatikan source code berikut : <br><pre>&#10;<code class='language-cpp'>&#10;#include &lt;iostream.h>&#10;&#10;void main(){&#10;  int warna;&#10;&#10;  cout << 'Menentukan warna' << endl;&#10;  cout << '1=MERAH 3=KUNING 5=BIRU' <<endl;&#10;  cout << '2=UNGU 4=HIJAU ' << endl;&#10; cout << 'Kode hari (1..5): ';&#10;  cin >> warna;&#10;&#10; if(warna==1){&#10;    cout << 'Merah'<< endl;&#10;  }else if(warna ==2){&#10;   cout << 'Ungu'<< endl;&#10; }else if(warna ==3){&#10;   cout << 'Kuning'<< endl;&#10; }else if(warna ==4){&#10;   cout << 'Hijau'<< endl;&#10;  }else if(warna ==5){&#10;   cout << 'Biru'<< endl;&#10; }else{&#10;   cout << 'Kode warna salah'<< endl;&#10; }&#10;}&#10;</code>&#10;</pre><br>Jika user memasukkan angka 3 sebagai inputan, warna apa yang keluar?",
+          ans: "Kuning",
+          ansSel:[ "Merah", "Ungu", "Hijau" ]
+        },{
+          ques: "Perhatikan source code berikut :<br><pre>&#10;<code class='language-cpp'>&#10;#include &lt;iostream.h>&#10;&#10;void main(){&#10; int i; &#10;  for(i=0 ; i<10 ; i+=2){&#10;    cout << 'C++' << endl;&#10; }&#10;}&#10;</code>&#10;</pre><br>Berapa kali tulisan C++ akan muncul?",
+          ans: "5",
+          ansSel:[ "9", "10", "11" ]
+        },{
+          ques: "Perhatikan source code berikut :<br><pre>&#10;<code class='language-cpp'>&#10;#include &lt;iostream.h>&#10;&#10;void main(){&#10; int i; &#10;  i = 0;&#10; do{&#10;    cout << 'C++' << endl;&#10;   i++;&#10; }while(i>10);&#10;}&#10;</code>&#10;</pre><br>Berapa kali tulisan C++ akan muncul?",
+          ans: "1",
+          ansSel:[ "0", "9", "10" ]
+        }
+        ]
+    /*tf:[
+      { ques: "cos( 30 degrees )", ans: "&#8730;3 / 2", ansSel: [ " &#8730;2 / 3", "1/4" ] },
+      { ques: "sin( 60 degrees )", ans: "&#8730;3 / 2", ansSel: [ "1/2", "&#8730;2" ] }       
+        ],
+        fill:[
+      { ques: "1/tan", ans: "cot" }, { ques: "1/cos", ans: "sec" }
+        ]*/
+  };
+  // quizMulti has 5 problems with 3 different quiz types.
+  options = {
+    intro: "Setelah mempelajari materi kondisi dan perulangan, kerjakan kuis ini.",
+    allRandom: true,
+    numOfQuizQues :3,
+    fxType:2,
+    title: "<i class= 'mdi-image-edit';></i> Quiz Materi 4 & 5",
+    disableDelete:true
+  };
+  
+  $( "#quizArea" ).jQuizMe( quizMulti, options );
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="quiz.html";
+      }
+    </script>
+  </body>
+
+</html>
+      

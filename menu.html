@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <style type="text/css">
+      .kaki{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+      }
+    </style>
+    
+    <script type="text/javascript" charset="utf-8">
+        function inis() {
+          document.addEventListener("deviceready", startup, false);
+        }
+
+        function startup() {
+          console.log("Aplikasi Siap...");
+          document.addEventListener("backbutton", bukamodal, false);
+        }
+
+        function bukamodal(){
+          $('#modalexit').openModal();
+        }
+      </script> 
+  </head>
+
+  <body onload="inis();" style="height:100%" class="blue lighten-3 animsition">
+    <header>
+      <nav>
+        <div class="nav-wrapper light-blue lighten-1">
+          <a href="#" class="brand-logo">Belajar C++</a>
+          <ul id="slide-out" class="side-nav full">
+            <li class="no-padding">
+              <li class="bold"><a href="menu.html">Menu Utama</a></li>
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a>
+        </div>
+      </nav>
+    </header>
+    <div style="text-align:center">
+        <i class= "mdi-hardware-desktop-windows" style="font-size:10em"></i><br>
+        <a href="materi.html" class="waves-effect waves-light btn-large blue darken-2"><i class="mdi-av-my-library-books"></i> Materi</a><br>
+        <a href="quiz.html" class="waves-effect waves-light btn-large blue darken-2"><i class="mdi-image-edit"></i> Quiz</a><br>
+        <a href="profil.html" class="waves-effect waves-light btn-large blue darken-2"><i class="mdi-action-trending-up"></i> Progress</a><br>
+        <!--<a href="code.html" class="waves-effect waves-light btn-large blue darken-2"><i class="mdi-image-filter-center-focus"></i> Code Now!</a><br>-->
+        <a href="about.html" class="waves-effect waves-light btn-large blue darken-2"><i class="mdi-social-group"></i> About</a><br>
+    </div>
+    
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+  </body>
+</html>
+      

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animsition.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/prism.css"/>
+    <link type="text/css" rel="stylesheet" href="css/init.css"/>
+  <script>
+      document.addEventListener("backbutton", balik, false);
+      function balik(){
+        location="materi.html";
+      }
+    </script>
+  </head>
+
+  <body id="top" class="scrollspy animsition" style="padding-top:0; padding-bottom:0;">
+    <header style="position:fixed;width:100%;z-index:1000">
+      <div class="navbar-fixed">
+        <nav class="top-nav light-blue lighten-1">
+            <div class="container" style="padding:0;">
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Belajar C++</a>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse waves-effect" style="text-align:center; width:55px"><i class="mdi-navigation-menu" style="font-size:2rem"></i></a></i></a>
+        </nav>
+      </div>
+          <ul id="slide-out" class="side-nav fixed">
+            <li class="bold"><a href="menu.html">Menu Utama</a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <div class="collapsible-header" style="color:#000;">Materi<i class="mdi-navigation-arrow-drop-down"></i></div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="bahasa.html">Bahasa Pemrograman</a></li>
+                      <li><a href="elemen.html">Elemen Dasar C++</a></li>
+                      <li><a href="operator.html">Operator</a></li>
+                      <li><a href="kondisi.html">Kondisi</a></li>
+                      <li><a href="perulangan.html">Perulangan</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="bold"><a href="quiz.html">Quiz</a></li>
+            <li class="bold"><a href="profil.html">Progress</a></li>
+            <!--<li class="bold"><a href="code.html">Code Now!</a></li>-->
+            <li class="bold"><a href="about.html">About</a></li>
+            <li class="bold"><a href="#modalexit" class="modal-trigger">Exit</a></li>
+          </ul>
+          
+
+    </header>
+    <main style="text-align:center; padding-top:56px">
+        <i class= "mdi-image-exposure" style="font-size:10em;"></i><br>
+        <h4>Operator</h4>
+        <br>
+        <a class='dropdown-button btn-large waves-effect waves-light light-blue lighten-1' href='#' data-activates='submateri1'>Pilih Sub Materi <i class="mdi-navigation-expand-more"></i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='submateri1' class='dropdown-content'>
+          <li><a href="#pendahuluan" class="collection-item waves-effect">Pendahuluan</a></li>
+          <li><a href="#aritmatika" class="collection-item waves-effect">Operator Aritmatika</a></li>
+          <li><a href="#incre" class="collection-item waves-effect">Operator Increment & Decrement</a></li>
+          <li><a href="#relasi" class="collection-item waves-effect">Operator Relasi</a></li>
+          <li><a href="#logika" class="collection-item waves-effect">Operator Logika</a></li>
+        </ul>
+
+    </main>
+    <main style="padding-bottom:0">
+        <div class="container" style="padding:0">
+      <a href="#top" class="atas btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="mdi-navigation-expand-less"></i></a>
+
+<h5 id="pendahuluan" class="section scrollspy">Pendahuluan</h5>
+<p class="flow-text">Operator merupakan simbol atau karakter yang biasa dilibatkan dalam program untuk melakukan suatu operasi maupun manipulasi.</p>
+<p class="flow-text">Contohnya : Penjumlahan, pengurangan, pembagian, dan lain-lain.</p>
+<p class="flow-text">Contoh penggunaan operator :</p>
+<pre>
+<code class="language-cpp">
+A + B
+    </code>
+</pre>
+<p class="flow-text">Symbol + adalah operator, sedangkan A dan B disebut dengan operand. Karena operator + di atas melibatkan 2 operand, maka operator ini memiliki sifat binary. Ada tiga  sifat operator, antara lain :</p>
+<ul>
+<li><h6>Unary</h6>
+<p class="flow-text">Operator yang hanya melibatkan sebuah operand, misalnya : 3++</p></li>
+<li><h6>Binary</h6>
+<p class="flow-text">Operator yang melibatkan dua operand, misalnya : 4+2</p></li>
+<li<h6>Ternary</h6>
+<p class="flow-text">Operator yang melibatkan tiga buah operand, misalnya : (a>b) ? a : b</p>
+</li>
+<ul>
+
+
+<h5 id="aritmatika" class="section scrollspy">Operator Aritmatika</h5>
+<p class="flow-text">Operator aritmatika adalah operator yang berfungsi untuk melakukan operasi aritmatika atau matematis.</p>
+<p class="flow-text">Berikut berbagai contoh operator aritmatika :</p>
+<table>
+<thead><tr><th>Operator</th> <th>Keterangan</th> <th>Contoh</th></tr></thead>
+<tr><td>*</td>  <td>Perkalian</td>  <td>A * B</td></tr>
+<tr><td>/</td>  <td>Pembagian</td>  <td>A / B</td></tr>
+<tr><td>%</td>  <td>Sisa Bagi (Modulus) </td> <td>A % B</td></tr>
+<tr><td>+</td>  <td>Penjumlahan</td>  <td>A + B</td></tr>
+<tr><td>-</td>  <td>Pengurangan</td>  <td>A - B</td></tr>
+<tr><td>=</td>  <td>Penugasan</td>  <td>A = 5</td></tr>
+
+</table>
+<p class="flow-text">Operator penugasan (=) berfungsi untuk mengisi atau mengubah isi suatu variable. Operasi A=5 berarti variable A diisi dengan 5.</p>
+<p class="flow-text">Berikut contoh penggunaan Operator Aritmatika :</p>
+<pre>
+<code class="language-cpp">
+  #include &lt;iostream.h> 
+  #include &lt;conio.h> 
+  void main() { 
+    cout << "Masukan Nilai A : ";  
+    cin >> a; 
+    cout << "Masukan Nilai B : ";  
+    cin >> b: 
+    cout << a << " + " << b << " = " << a+b << endl; 
+    cout << a << " - " << B << " = " << a-b << endl; 
+    cout << a << " * " << b << " = " << a*b << endl; 
+    cout << A << " / " << b << " = " << a/b << endl; 
+    cout << a << " % " << b << " = " << a%b << endl: 
+    getch(); 
+  }
+    </code>
+</pre>
+<h5 id="incre" class="section scrollspy">Operator Increment & Decrement</h5>
+<p class="flow-text">Operator Increment dan Decrement berfungsi untuk menaikkan atau menurunkan suatu nilai bilangan bulat. Terdapat dua operator, yaitu : </p>
+
+<table>
+<thead><tr><th>Operator</th> <th>Keterangan</th></tr></thead>
+<tr><td>++</td> <td>Operator penaikan</td></tr>
+<tr><td>--</td> <td>Operator Penurunan</td></tr>
+</table>
+
+<p class="flow-text">Operasi :</p>
+<pre>
+<code class="language-cpp">
+  A = A+1;
+  B = B-1;
+    </code>
+</pre>
+<p class="flow-text">Dapat disederhanakan menjadi :</p>
+<pre>
+<code class="language-cpp">
+  A++;
+  B++;
+    </code>
+</pre>
+<p class="flow-text">Atau :</p>
+<pre>
+<code class="language-cpp">
+  ++A;
+  ++B;
+    </code>
+</pre>
+<p class="flow-text">Kedua bentuk penulisan di atas memiliki fungsi yang berbeda, yaitu :</p>
+<ul>
+<li><p class="flow-text">Jika diletakkan di depan variabel. Maka proses penambahan atau pengurangan akan dilakukan sesaat sebelum atau langsung pada saat menjumpai ekspresi ini sehingga nilai variabel tadi akan langsung berubah begitu ekspresi ini di temukan.</p></li>
+<li><p class="flow-text">Jika diletakkan di belakang variabel.  Maka proses penambahan atau pengurangan akan dilakukan setelah ekspresi ini di jumpai atau nilai variabel akan tetap pada saat ekspresi ini ditemukan.</p></li>
+</ul>
+
+<p class="flow-text">Berikut contoh penggunaannya :</p>
+<pre>
+<code class="language-cpp">
+  #include &lt;stdio.h> 
+  #include &lt;conio.h> 
+  void main() 
+  { 
+     int a = 8, b = 4; 
+     printf(" Nilai A   = %d", a); 
+     printf("\n Nilai A++ = %d", a++); 
+     printf("\n Nilai A   = %d", a); 
+     printf("\n Nilai B-- = %d", B--): 
+     printf("\n Nilai B   = %d", b); 
+     getch(); 
+  }
+    </code>
+</pre>
+<h5 id="relasi" class="section scrollspy">Operator Relasi (Perbandingan)</h5>
+<p class="flow-text">Operator relasi ini digunakan untuk membandingkan dua buah nilai. Hasil dari perbandingan operator ini menghasilkan nilai numeric 1 (True) atau 0 (False).
+Berikut adalah operasi Relasi :</p>
+<table>
+<thead><tr><th>Operator</th><th> Keterangan</th></tr></thead>
+<tr><td>==</td><td> Sama dengan (bukan penugasan) </td></tr>
+<tr><td>!=</td><td> Tidak sama dengan</td></tr>
+<tr><td>></td><td>  Lebih dari</td></tr>
+<tr><td><</td><td>  Kurang dari</td></tr>
+<tr><td>>=</td><td> Lebih dari atau sama dengan</td></tr>
+<tr><td><=</td><td> Kurang dari atau sama dengan</td></tr>
+</table>
+<p class="flow-text">Contoh penggunaan operasi relasi :</p>
+<pre>
+<code class="language-cpp">
+  // Penggunaan operator relasi dan if, if else 
+  #include &lt;iostream.h> 
+  void main() 
+  { 
+     int m = 5, n = 7; 
+     if (m == n) cout << M << " Sama Dengan " << n << endl; 
+     else if (m != n) cout << m << " Tidak Sama Dengan  " << n << endl; 
+     else if (m > n) cout << m << " Lebih Besar Dari " << n << endl; 
+     else if (m < n) cout << m << " Lebih Kecil Dari " << n << endl; 
+  }
+    </code>
+</pre>
+<h5 id="logika" class="section scrollspy">Operator Logika</h5>
+<p class="flow-text">Operator logika berfungsi untuk menggabungkan dua buah operasi menjadi satu. Terdapat tiga buah operator logika, yakni :</p>
+<table>
+<thead><tr><th>Operator</th><th> Keterangan</th><th> Contoh</th></tr></thead>
+<tr><td>&&</td><td> AND</td><td>  X && Y</td></tr>
+<tr><td>||</td><td> OR</td><td> X || Y</td></tr>
+<tr><td>!</td><td>  NOT</td><td>  !X</td></tr>
+</table>
+<p class="flow-text">Contoh penggunaan operator logika :</p>
+<pre>
+<code class="language-cpp">
+//Program Operator Logika 
+#include &lt;iostream.h> 
+#include &lt;conio.h> 
+void main() 
+{ 
+ int m = 166: 
+ cout << "(m>=0 && m <=150) -> " << (m>=0 && m<=150) << endl; 
+ cout << "(m>=0 || m<=150) -> " << (m>=0 || m<=150) << endl; 
+ getch(); 
+}
+    </code>
+</pre>
+      </div>
+    </main>
+
+
+    <footer class="page-footer light-blue lighten-1" style="padding-top:0px">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="valign" style="color:#fff">&copy; 2014 Samsul Arifin, All Right Reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <div id="modalexit" class="modal">
+      <h4>Konfirmasi</h4>
+      <p>Keluar dari Aplikasi?</p>
+      <div class="action-bar">
+        <a onclick="keluar()" href="#" class="waves-effect waves-light btn red darken-4 modal-action">Ya</a>
+        <a href="#" class="waves-effect waves-light btn teal lighten-2 modal-action modal-close">Tidak</a>
+      </div>
+    </div>
+            
+
+            
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+  </body>
+</html>
+      
